@@ -1,4 +1,3 @@
-//Replace Account number in 49th line (Deploy Stage)  
 pipeline{
     agent any
     stages{
@@ -38,7 +37,7 @@ pipeline{
                     deployLambda(
                             [
                                 alias: 'version-${BUILD_NUMBER}',
-                                artifactLocation: 's3://chandunodejs/Artifacts/${BUILD_NUMBER}-Artifacts.zip',
+                                artifactLocation: 's3://<bucketname>/Artifacts/${BUILD_NUMBER}-Artifacts.zip',
                                 awsRegion: 'us-east-2', 
                                 deadLetterQueueArn: '', 
                                 description: '', 
@@ -46,7 +45,7 @@ pipeline{
                                 functionName: 'NodeApp', 
                                 handler: 'index.handler', 
                                 memorySize: '128', 
-                                role: 'arn:aws:iam::Accountnumber:role/lambda_basic_execution', 
+                                role: 'arn:aws:iam::<Accountnumber>:role/lambda_basic_execution', 
                                 runtime: 'nodejs8.10', 
                                 securityGroups: '', 
                                 subnets: '', 
