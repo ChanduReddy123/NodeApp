@@ -4,5 +4,5 @@ Replace the bucket name where ever required <br />
 Attach EC2 role with AWS lambda and S3 permissions to build server<br />
 
 ## Plugins used
-*S3 Publisher plugin<br />
-*AWS Lambda Plugin<br />
+<ul><li>S3 Publisher plugin</li></ul>
+         <ul></li>AWS Lambda Plugin</li></ul>
